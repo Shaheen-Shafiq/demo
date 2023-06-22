@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+ <h3>DETAILS OF MOVIE</h3>
+<div class="container">
+<div class="row">
+    <div class="col-md-6">
+<img src="{{b.img.url}}">
+    </div>
+        <div class="col-md-6">
+
+<li>{{b.title}}</li>
+<li>{{b.description}}</li>
+    <a href="{% url 'cinema:movieupdate' b.id %}" class="btn btn-warning">update</a>
+    <a href="{% url 'cinema:moviedelete' b.id %}" class="btn btn-danger">delete</a>
+        </div>
+{% endblock %}
+
+
+
+
